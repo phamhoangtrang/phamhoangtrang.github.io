@@ -3,30 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Pham Hoang Trang - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #333; }
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #0984e3;
+            --text-color: #2d3436;
+            --bg-color: #f5f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0984e3, #00b894);
+            color: white;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tech-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #f8f9fa;
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header {
+                padding: 3rem 0;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>🚀 About Me</h1>
-    <p>👋 Hi there! I'm <strong>Pham Hoang Trang</strong>, a passionate third-year student with a love for programming.</p>
-    <p>💻 I specialize in <strong>PHP & Python</strong>, always eager to explore new technologies and optimize my code.</p>
-    <p>⚡ My goal: Become a skilled developer, build useful products, and contribute to the open-source community.</p>
+    <div class="header">
+        <h1>Pham Hoang Trang</h1>
+        <p>Third-year student passionate about programming and technology</p>
+    </div>
 
-    <h2>🛠 Tech Stack</h2>
-    <ul>
-        <li><strong>Backend:</strong> PHP (Laravel), Python (Flask, Django)</li>
-        <li><strong>Frontend:</strong> Vue.js, Blade Template</li>
-        <li><strong>Database:</strong> MySQL, PostgreSQL</li>
-        <li><strong>Other:</strong> Docker, Git, API Development</li>
-    </ul>
+    <div class="container">
+        <section class="section">
+            <h2>👋 About Me</h2>
+            <p>I'm a passionate third-year student with a strong foundation in programming. My journey in technology is driven by curiosity and a desire to create meaningful solutions. I specialize in PHP & Python development, constantly exploring new technologies and optimizing my code to build efficient and scalable applications.</p>
+        </section>
 
-    <h2>📫 Connect with Me</h2>
-	<p>🔗 Facebook: <a href="https://www.facebook.com/phamhoangtrang.vn">facebook.com/phamhoangtrang.vn</a></p>
-    <p>🔗 GitHub: <a href="https://github.com/phamhoangtrang">github.com/phamhoangtrang</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/phamhoangtrangvn">linkedin.com/in/phamhoangtrangvn</a></p>
-	<p>🔗 Chatwork: <a href="https://www.chatwork.com/phamhoangtrangvn">chatwork.com/phamhoangtrangvn</a></p>
+        <section class="section">
+            <h2>🛠 Tech Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <h3>Backend</h3>
+                    <p>PHP (Laravel), Python (Flask, Django)</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Frontend</h3>
+                    <p>Vue.js, Blade Template</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Database</h3>
+                    <p>MySQL, PostgreSQL</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Other Tools</h3>
+                    <p>Docker, Git, API Development</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📫 Connect with Me</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/phamhoangtrang.vn" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://github.com/phamhoangtrang" class="social-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/phamhoangtrangvn" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.chatwork.com/phamhoangtrangvn" class="social-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Chatwork</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add scroll animation
+        const sections = document.querySelectorAll('.section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.5s ease-out';
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
